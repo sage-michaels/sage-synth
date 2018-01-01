@@ -11,6 +11,7 @@ import qualified Examples.Goldreich  as Goldreich
 import qualified Examples.Tribes     as Tribes
 import qualified Examples.Point      as Point
 import qualified Examples.Comparison as Comparison
+import qualified Examples.Comp2      as Comp2
 
 import Control.Monad
 import Options
@@ -120,6 +121,8 @@ main = runCommand $ \opts args -> do
         Just "tribes"        -> mapM_ (circuitMain opts []) =<< Tribes.make
         Just "point"         -> mapM_ (circuitMain opts []) =<< Point.make
         Just "comparison"    -> mapM_ (circuitMain opts []) =<< Comparison.make
+        Just "comp2"         -> mapM_ (circuitMain opts []) =<< Comp2.make
+
         Just "ggmSigma256"   -> mapM_ (circuitMain opts []) =<< Goldreich.makeGGMSigma256
         Just "ggmSigma1024"  -> mapM_ (circuitMain opts []) =<< Goldreich.makeGGMSigma1024
         Just _ -> do

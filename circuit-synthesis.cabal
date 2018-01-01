@@ -24,6 +24,7 @@ library
                         , Examples.Aes
                         , Examples.BBKK
                         , Examples.Comparison
+                        , Examples.Comp2
                         , Examples.Goldreich
                         , Examples.Point
                         , Examples.Tribes
